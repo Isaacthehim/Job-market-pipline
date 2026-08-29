@@ -17,7 +17,7 @@ HEADERS = {
     "web-app-version": "19.0.121",
 }
 PAGE_SIZE = 30
-DELAY_BETWEEN_PAGES = 3  r
+DELAY_BETWEEN_PAGES = 3 
 
 # ============== FETCH ALL PAGES ==============
 all_jobs = []
@@ -97,7 +97,7 @@ with open(csv_file, "w", encoding="utf-8-sig", newline="") as cf:
         activation = job.get("activationTime", "")
         url = f"https://jobvision.ir/job/{jid}" if jid else ""
 
-        # If salary is a dict, format it nicely
+        # format e salary 
         if isinstance(salary, dict):
             salary = f"{salary.get('from','')}-{salary.get('to','')} {salary.get('unit','')}"
 
